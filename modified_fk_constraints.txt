@@ -366,22 +366,15 @@ ADD CONSTRAINT FK_BPLLDID FOREIGN KEY (LocalDID) REFERENCES Dairy (LocalDID);
 
 T49
 
-ALTER TABLE AdditionalCustMob
+ALTER TABLE AdditionalCust
 ADD CONSTRAINT FK_ACLDID FOREIGN KEY (LocalDID) REFERENCES Dairy (LocalDID);
-
-/////////////////////////////////////////////////////////////////////////
-
-T50
-
-ALTER TABLE AdditionalCustName
-ADD CONSTRAINT FK_ACNACID FOREIGN KEY (ACustID) REFERENCES AdditionalCustMob (ACustID);
 
 ///////////////////////////////////////////////////////////////////////
 
 T51
 
 ALTER TABLE AddMilkLog
-ADD CONSTRAINT FK_AMLACID FOREIGN KEY (ACustID) REFERENCES AdditionalCustMob (ACustID);
+ADD CONSTRAINT FK_AMLACID FOREIGN KEY (ACustID) REFERENCES AdditionalCust (ACustID);
 
 ALTER TABLE AddMilkLog
 ADD CONSTRAINT FK_AMLLDID FOREIGN KEY (LocalDID) REFERENCES Dairy (LocalDID);
