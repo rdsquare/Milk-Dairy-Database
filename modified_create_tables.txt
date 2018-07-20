@@ -188,12 +188,6 @@ LocalDID char(6)
 );
 
 
-T49
-create table AdditionalCustMob(
-ACustID int,
-Contact char(13),
-LocalDID char(6)  
-);
 
 
 T54
@@ -681,29 +675,23 @@ ToBID int,
 LocalDID char(6)
 );
 
-
-T50
-create table AdditionalCustName(
-ACustID int  ,
-AFName varchar(20)  ,
-AMName varchar(20)  ,
-ALName varchar(20)  
+T49
+create table AdditionalCust(
+ACustID int,
+CustName char(50),
+Contact char(13),
+LocalDID char(6)  
 );
-
-
-
-
 
 
 
 T51
 create table AddMilkLog(
 ACustID int  ,
+OfDate Date,
 DateATime timestamp  ,
+IsMorning char(1),
 Quantity float,
-SNF float,
-FAT float,
-WaterP char(4),
 Price float,
 IsKg char(1)  ,
 LocalDID char(6)
