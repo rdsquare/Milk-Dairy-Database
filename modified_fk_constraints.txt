@@ -374,7 +374,7 @@ ADD CONSTRAINT FK_ACLDID FOREIGN KEY (LocalDID) REFERENCES Dairy (LocalDID);
 T51
 
 ALTER TABLE AddMilkLog
-ADD CONSTRAINT FK_AMLACID FOREIGN KEY (ACustID, LocalDID) REFERENCES AdditionalCust (ACustID, LocalDID);
+ADD CONSTRAINT FK_AMLACID FOREIGN KEY (ACustID, LocalDID) REFERENCES AdditionalCust (Contact, LocalDID);
 
 
 ///////////////////////////////////////////////////////////////////

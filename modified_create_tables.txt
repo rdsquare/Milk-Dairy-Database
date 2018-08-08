@@ -677,9 +677,8 @@ LocalDID char(6)
 
 T49
 create table AdditionalCust(
-ACustID int,
-CustName char(50),
 Contact char(13),
+CustName char(50),
 LocalDID char(6)  
 );
 
@@ -687,7 +686,7 @@ LocalDID char(6)
 
 T51
 create table AddMilkLog(
-ACustID int  ,
+ACustID char(13)  ,
 OfDate Date,
 DateATime timestamp  ,
 IsMorning char(1),
