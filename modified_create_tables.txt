@@ -859,7 +859,7 @@ LocalDID char(6)
 
 T65
 create table ProductSILog(
-ACustID int  ,
+ACustID char(13)  ,
 OnDate Date  ,
 DateATime timestamp  ,
 ProductID char(10)  ,
@@ -901,4 +901,16 @@ CREATE TABLE ProductGst (
 ProductID char(10),
 LocalDID char(6),
 gst float
+);
+
+CREATE TABLE HighOfDairy (
+LocalDID char(6),
+ProdID char(10),
+ConsID char(10)
+);
+
+CREATE TABLE UserPass (
+custID char(10),
+userName char(40),
+userPass char(40)
 );

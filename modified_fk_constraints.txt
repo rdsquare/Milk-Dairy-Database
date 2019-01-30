@@ -487,7 +487,7 @@ ADD CONSTRAINT FK_PSELPID FOREIGN KEY (ProductID, LocalDID) REFERENCES Product (
 T65
 
 ALTER TABLE ProductSILog
-ADD CONSTRAINT FK_PSILACID FOREIGN KEY (ACustID) REFERENCES AdditionalCustMob (ACustID);
+ADD CONSTRAINT FK_PSILACID FOREIGN KEY (ACustID, LocalDID) REFERENCES AdditionalCustMob (Contact, LocalDID);
 
 ALTER TABLE ProductSILog
 ADD CONSTRAINT FK_PSILPID FOREIGN KEY (ProductID, LocalDID) REFERENCES Product (ProductID, LocalDID);
@@ -520,5 +520,24 @@ ADD CONSTRAINT FK_DRLSD FOREIGN KEY (SendDairy) REFERENCES Dairy(LocalDID);
 ALTER TABLE DairyRequestLog
 ADD CONSTRAINT FK_DRLTD FOREIGN KEY (ToDairy) REFERENCES Dairy(LocalDID);
 
+////////////////////////////////////////////////////////////
+
+T70
+
 ALTER TABLE ProductGst
 ADD CONSTRAINT FK_PGPIDLDID FOREIGN KEY (ProductID, LocalDID) REFERENCES Product (ProductID, LocalDID);
+
+////////////////////////////////////////////////////////
+
+T71
+
+ALTER TABLE HighOfDairy
+ADD CONSTRAINT FK_HODLDID FOREIGN KEY (LocalDID)
+REFERENCES Dairy(LocalDID);
+
+
+
+
+
+
+
